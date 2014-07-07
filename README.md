@@ -1,7 +1,7 @@
 definitive-module-pattern
 ==========================
 
-The "Definitive Module Pattern" is an alternative to the "Module Pattern" and the "Revealing Module Pattern". It offers the following advantages: declaratively namespaces the private and public subroutines, decouples the public subroutines from the return statement, and groups all content within object literals.
+The Javascript "Definitive Module Pattern" is an alternative to the "Module Pattern" and the "Revealing Module Pattern". It offers the following advantages: declaratively namespaces the private and public subroutines, decouples the public subroutines from the return statement, and groups all content within object literals.
 
 Module Pattern
 
