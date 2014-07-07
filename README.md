@@ -61,7 +61,7 @@ Revealing Module Pattern
 
     })();
 
-**Definitive Module Pattern (CommonJS version)**
+Definitive Module Pattern (CommonJS version)
 
     var module = (function () {
 
