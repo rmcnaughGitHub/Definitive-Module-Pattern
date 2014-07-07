@@ -84,7 +84,7 @@ Definitive Module Pattern (CommonJS version)
     module.exports = module;
 
 
-**Definitive Module Pattern (Poly-public Version)**
+Definitive Module Pattern (Poly-public Version)
 
     var module = (function () {
 
