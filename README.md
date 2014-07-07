@@ -84,7 +84,7 @@ Definitive Module Pattern (CommonJS version)
     module.exports = module;
 
 
-**Definitive Module Pattern (Publics Version)**
+**Definitive Module Pattern (Poly-public Version)**
 
     var module = (function () {
 
@@ -106,7 +106,7 @@ Definitive Module Pattern (CommonJS version)
             public_two: _private.private_two
         };
 
-        // configurable publics scope
+        // configurable poly-public scope
         var _publics = [_public1, _public2];
 
         return _publics;
