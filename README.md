@@ -13,10 +13,10 @@ Module Pattern
 
         // public subroutines
         return {
-            private_one: function () {
+            public_one: function () {
                 private_one();
             },
-            private_two: function () {
+            public_two: function () {
                 private_two();
             }
         };
@@ -33,8 +33,8 @@ Revealing Module Pattern
 
         // public subroutines
         return {
-            private_one: private_one,
-            private_two: private_two
+            public_one: private_one,
+            public_two: private_two
         };
 
     })();
