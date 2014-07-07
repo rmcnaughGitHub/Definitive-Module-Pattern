@@ -88,19 +88,19 @@ Definitive Module Pattern (Poly-public Version)
 
     var module = (function () {
 
-        // private scope
+        // private subroutines
         var _private = {
             private_one: function () {},
             private_two: function () {}
         };
 
-        // public scope 1
+        // public subroutines (set 1)
         var _public1 = {
             public_one: _private.private_one,
             public_two: _private.private_two
         };
 
-        // public scope 2
+        // public subroutines (set 2)
         var _public2 = {
             public_one: _private.private_one,
             public_two: _private.private_two
