@@ -39,7 +39,7 @@ Revealing Module Pattern
 
     })();
 
-Definitive Module Pattern
+*Definitive Module Pattern*
 
     var module = (function () {
 
