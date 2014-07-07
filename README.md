@@ -61,3 +61,24 @@ Revealing Module Pattern
 
     })();
 
+**Definitive Module Pattern (with CommonJS)**
+
+    var module = (function () {
+
+        // private subroutines
+        var _private = {
+            private_one: function () {},
+            private_two: function () {}
+        };
+
+        // public subroutines
+        var _public = {
+            public_one: _private.private_one,
+            public_two: _private.private_two
+        };
+
+        return _public;
+
+    })();
+
+    module.exports = module;
