@@ -131,5 +131,3 @@ Definitive Module Pattern (Poly-public Version)
         return _publics;
 
     })();
-
-    module.exports = module;
