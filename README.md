@@ -64,15 +64,19 @@ Revealing Module Pattern
 Definitive Module Pattern (CoffeeScript version)
 
     module = (->
+
+        // private subroutines
         _private =
             private_one: ->
             
             private_two: ->
             
+    
+        // public subroutines
         _public =
             public_one: _private.private_one
             public_two: _private.private_two
-        
+    
         _public
     )()
 
