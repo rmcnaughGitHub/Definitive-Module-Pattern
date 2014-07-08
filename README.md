@@ -9,11 +9,11 @@ Module Pattern
 
     var module = (function () {
 
-        // private subroutines
+        // private
         var private_one = function () {};
         var private_two = function () {};
 
-        // public subroutines
+        // public
         return {
             public_one: function () {
                 private_one();
@@ -29,11 +29,11 @@ Revealing Module Pattern
 
     var module = (function () {
 
-        // private subroutines
+        // private
         var private_one = function () {};
         var private_two = function () {};
 
-        // public subroutines
+        // public
         return {
             public_one: private_one,
             public_two: private_two
@@ -45,13 +45,13 @@ Revealing Module Pattern
 
     var module = (function () {
 
-        // private subroutines
+        // private
         var _private = {
             private_one: function () {},
             private_two: function () {}
         };
 
-        // public subroutines
+        // public
         var _public = {
             public_one: _private.private_one,
             public_two: _private.private_two
@@ -65,14 +65,14 @@ Definitive Module Pattern (CoffeeScript version)
 
     module = (->
 
-        // private subroutines
+        // private
         _private =
             private_one: ->
             
             private_two: ->
             
     
-        // public subroutines
+        // public
         _public =
             public_one: _private.private_one
             public_two: _private.private_two
@@ -84,13 +84,13 @@ Definitive Module Pattern (CommonJS version)
 
     var module = (function () {
 
-        // private subroutines
+        // private
         var _private = {
             private_one: function () {},
             private_two: function () {}
         };
 
-        // public subroutines
+        // public
         var _public = {
             public_one: _private.private_one,
             public_two: _private.private_two
@@ -107,19 +107,19 @@ Definitive Module Pattern (configurable public scopes)
 
     var module = (function () {
 
-        // private subroutines
+        // private
         var _private = {
             private_one: function () {},
             private_two: function () {}
         };
 
-        // public subroutines (set 1)
+        // public (set 1)
         var _public1 = {
             public_one: _private.private_one,
             public_two: _private.private_two
         };
 
-        // public subroutines (set 2)
+        // public (set 2)
         var _public2 = {
             public_one: _private.private_one,
             public_two: _private.private_two
