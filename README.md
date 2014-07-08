@@ -61,6 +61,21 @@ Revealing Module Pattern
 
     })();
 
+Definitive Module Pattern (CoffeeScript version)
+
+    module = (->
+        _private =
+            private_one: ->
+            
+            private_two: ->
+            
+        _public =
+            public_one: _private.private_one
+            public_two: _private.private_two
+        
+        _public
+    )()
+
 Definitive Module Pattern (CommonJS version)
 
     var module = (function () {
