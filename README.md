@@ -3,7 +3,7 @@ Javascript - Definitive Module Pattern
 
 http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html
 
-The Javascript "Definitive Module Pattern" is an alternative to the "Module Pattern" and the "Revealing Module Pattern". It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable pubic scopes (or polyscopes).
+The Javascript "Definitive Module Pattern" is an alternative to the "Module Pattern" and the "Revealing Module Pattern". It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable public scopes (or polyscopes).
 
 Module Pattern
 
