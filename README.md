@@ -110,7 +110,8 @@ Definitive Module Pattern (configurable public scopes)
         // private
         var _private = {
             private_one: function () {},
-            private_two: function () {}
+            private_two: function () {},
+            private_three: function () {}
         };
 
         // public (set 1)
@@ -122,7 +123,7 @@ Definitive Module Pattern (configurable public scopes)
         // public (set 2)
         var _public2 = {
             public_one: _private.private_one,
-            public_two: _private.private_two
+            public_three: _private.private_three
         };
 
         // configurable public scopes
