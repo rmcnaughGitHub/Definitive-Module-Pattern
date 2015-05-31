@@ -3,15 +3,15 @@ Javascript - Definitive Module Pattern
 
 http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html
 
-The Javascript "Definitive Module Pattern" is an alternative to the "Module Pattern" and the "Revealing Module Pattern". It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable public scopes (or polyscopes).
+The Javascript "Definitive Module Pattern" (DMP) is an alternative to the "Module Pattern" (MP) and the "Revealing Module Pattern" (RMP). It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable public scopes (or polyscopes).
 
-DMP is better than RMP, because it's declarative. It's easier to see which function-methods are private and which function-methods are public - like the keywords found in Java, C++, and other static languages.
+The DMP is better than RMP, because it's declarative. It's easier to see which function-methods are private and which function-methods are public - like the keywords found in Java, C++, and other static languages.
 
 **Using 'private' functions as a property of _private Object Literal?**  
 All function-methods are bundled under a single object literal, which is labeled as _private. DMP therefore is more object-oriented (and less procedural ) than RMP. It's also declarative - anyone who looks at the code knows that the _private object contains private data.
 
 **Decoupling the public functions from the return statement?**  
-The RMP couples the return statement to an object literal (which contains the public function-methods) - it looks messy (like writing all your code on a single line). It's cleaner and declarative to return a variable named _public.
+The RMP couples the return statement to an object literal (which contains the public function-methods) - it looks messy (like writing all your code on a single line). It's cleaner and it's declarative to return a variable named _public.
 
 **Configurable public scopes?**  
 Let's say you want to provide one set of public function-methods for your module (a & b), and another set of public function-methods for your module (a & c). The user can therefore select which configuration of public function-methods they need from your module. See the code for further understanding.
