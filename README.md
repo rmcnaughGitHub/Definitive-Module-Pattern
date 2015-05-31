@@ -30,7 +30,7 @@ DMP is better than RMP, because it's declarative. It's easier to see which funct
 All function-methods are bundled under a single object literal, which is labeled as `_private`. DMP therefore is more object-oriented (and less procedural ) than RMP. It's also declarative - anyone who looks at the code knows that the `_private` object contains private data.
 
 **Decoupling the public functions from the return statement?**  
-The RMP couples the return statement to an object literal (which contains the public function-methods) - it looks messy (like writing all your code on a single line). It's declarative, and easier, to return a variable named `_public`.
+RMP couples the return statement to an object literal (which contains the public function-methods) - it looks messy (like writing all your code on a single line). It's declarative, and easier, to return a variable named `_public`.
 
 **Configurable public scopes?**  
 Let's say you want to provide one set of public function-methods for your module (a & b), and another set of public function-methods for your module (a & c). The user can therefore select which configuration of public function-methods they need from your module. DMP makes it easier to declare public scopes when the `return` statement has been decoupled from the object literal. See the code under "configurable public scopes" for further understanding.
