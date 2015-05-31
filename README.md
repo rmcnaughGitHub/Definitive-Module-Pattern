@@ -5,6 +5,24 @@ http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html
 
 The Javascript "Definitive Module Pattern" (DMP) is an alternative to the "Module Pattern" (MP) and the "Revealing Module Pattern" (RMP). It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable public scopes (or polyscopes).
 
+    var module = (function () {
+    
+        // private
+        var _private = {
+            private_one: function () {},
+            private_two: function () {}
+        };
+    
+        // public
+        var _public = {
+            public_one: _private.private_one,
+            public_two: _private.private_two
+        };
+    
+        return _public;
+    
+    })();
+
 DMP is better than RMP, because it's declarative. It's easier to see which function-methods are private and which function-methods are public - like the keywords found in Java, C++, and other static languages.
 
 **Using private functions as a property of `_private` Object Literal?**  
