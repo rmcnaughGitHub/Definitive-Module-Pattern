@@ -16,6 +16,7 @@ The RMP couples the return statement to an object literal (which contains the pu
 **Configurable public scopes?**  
 Let's say you want to provide one set of public function-methods for your module (a & b), and another set of public function-methods for your module (a & c). The user can therefore select which configuration of public function-methods they need from your module. DMP makes it easier to declare public scopes when the `return` statement has been decoupled from the object literal. See the code under "configurable public scopes" for further understanding.
 
+==========================
 
 Module Pattern
 
