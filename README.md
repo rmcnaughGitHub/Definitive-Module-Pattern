@@ -1,28 +1,30 @@
 Javascript - Definitive Module Pattern
 ==========================
 
-http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html
+[http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html](http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html)
 
 The Javascript "Definitive Module Pattern" (DMP) is an alternative to the "Module Pattern" (MP) and the "Revealing Module Pattern" (RMP). It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable public scopes (or polyscopes).
 
-    // Definitive Module Pattern
-    var module = (function () {
+```js
+// Definitive Module Pattern
+var module = (function () {
     
-        // private
-        var _private = {
-            privateOne: function () {},
-            privateTwo: function () {}
-        };
+    // private
+    var _private = {
+        privateOne: function () {},
+        privateTwo: function () {}
+    };
     
-        // public
-        var _public = {
-            publicOne: _private.privateOne,
-            publicTwo: _private.privateTwo
-        };
+    // public
+    var _public = {
+        publicOne: _private.privateOne,
+        publicTwo: _private.privateTwo
+    };
     
-        return _public;
+    return _public;
     
-    })();
+})();
+```
 
 DMP is better than RMP, because it's declarative. It's easier to see which function-methods are private and which function-methods are public - like the keywords found in Java, C++, and other static languages.
 
@@ -39,128 +41,139 @@ Let's say you want to provide one set of public function-methods for your module
 
 Module Pattern
 
-    var module = (function () {
+```js
+var module = (function () {
 
-        // private
-        var privateOne = function () {};
-        var privateTwo = function () {};
+    // private
+    var privateOne = function () {};
+    var privateTwo = function () {};
 
-        // public
-        return {
-            publicOne: function () {
-                privateOne();
-            },
-            publicTwo: function () {
-                privateTwo();
-            }
-        };
+    // public
+    return {
+        publicOne: function () {
+            privateOne();
+        },
+        publicTwo: function () {
+            privateTwo();
+        }
+    };
 
-    })();
+})();
+```
 
 Revealing Module Pattern
 
-    var module = (function () {
+```js
+var module = (function () {
 
-        // private
-        var privateOne = function () {};
-        var privateTwo = function () {};
+    // private
+    var privateOne = function () {};
+    var privateTwo = function () {};
 
-        // public
-        return {
-            publicOne: privateOne,
-            publicTwo: privateTwo
-        };
+    // public
+    return {
+        publicOne: privateOne,
+        publicTwo: privateTwo
+    };
 
-    })();
+})();
+```
 
 **Definitive Module Pattern**
 
-    var module = (function () {
+```js
+var module = (function () {
 
-        // private
-        var _private = {
-            privateOne: function () {},
-            privateTwo: function () {}
-        };
+    // private
+    var _private = {
+        privateOne: function () {},
+        privateTwo: function () {}
+    };
 
-        // public
-        var _public = {
-            publicOne: _private.privateOne,
-            publicTwo: _private.privateTwo
-        };
+    // public
+    var _public = {
+        publicOne: _private.privateOne,
+        publicTwo: _private.privateTwo
+    };
 
-        return _public;
+    return _public;
 
-    })();
+})();
+```
 
 Definitive Module Pattern (CoffeeScript version)
 
-    module = (->
+```js
+module = (->
 
-        // private
-        _private =
-            privateOne: ->
-            
-            privateTwo: ->
-            
+    // private
+    _private =
+        privateOne: ->
+        
+        privateTwo: ->
+        
     
-        // public
-        _public =
-            publicOne: _private.privateOne
-            publicTwo: _private.privateTwo
+    // public
+    _public =
+        publicOne: _private.privateOne
+        publicTwo: _private.privateTwo
     
-        _public
-    )()
+    _public
+)()
+```
 
 Definitive Module Pattern (CommonJS version)
 
-    var module = (function () {
+```js
+var module = (function () {
 
-        // private
-        var _private = {
-            privateOne: function () {},
-            privateTwo: function () {}
-        };
+    // private
+    var _private = {
+        privateOne: function () {},
+        privateTwo: function () {}
+    };
 
-        // public
-        var _public = {
-            publicOne: _private.privateOne,
-            publicTwo: _private.privateTwo
-        };
+    // public
+    var _public = {
+        publicOne: _private.privateOne,
+        publicTwo: _private.privateTwo
+    };
 
-        return _public;
+    return _public;
 
-    })();
+})();
 
-    module.exports = module;
-
+module.exports = module;
+```
 
 Definitive Module Pattern (configurable public scopes)
 
-    var module = (function () {
+```js
+var module = (function () {
 
-        // private
-        var _private = {
-            privateOne: function () {},
-            privateTwo: function () {},
-            privateThree: function () {}
-        };
+    // private
+    var _private = {
+        privateOne: function () {},
+        privateTwo: function () {},
+        privateThree: function () {}
+    };
 
-        // public (set 1)
-        var _public1 = {
-            publicOne: _private.privateOne,
-            publicTwo: _private.privateTwo
-        };
+    // public (set 1)
+    var _public1 = {
+        publicOne: _private.privateOne,
+        publicTwo: _private.privateTwo
+    };
 
-        // public (set 2)
-        var _public2 = {
-            publicOne: _private.privateOne,
-            publicThree: _private.privateThree
-        };
+    // public (set 2)
+    var _public2 = {
+        publicOne: _private.privateOne,
+        publicThree: _private.privateThree
+    };
 
-        // configurable public scopes
-        var _publics = [_public1, _public2];
+    // configurable public scopes
+    var _publics = [_public1, _public2];
 
-        return _publics;
+    return _publics;
 
-    })();
+})();
+```
