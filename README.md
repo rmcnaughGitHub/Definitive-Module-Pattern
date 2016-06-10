@@ -1,8 +1,6 @@
 Javascript - Definitive Module Pattern
 ==========================
 
-[http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html](http://inniepress.blogspot.com/2014/07/definitive-module-pattern.html)
-
 The Javascript "Definitive Module Pattern" (DMP) is an alternative to the "Module Pattern" (MP) and the "Revealing Module Pattern" (RMP). It offers the following advantages: declaratively namespaces the private and public functions, decouples the public functions from the return statement, groups all functions within object literals, and offers configurable public scopes (or polyscopes).
 
 ```js
